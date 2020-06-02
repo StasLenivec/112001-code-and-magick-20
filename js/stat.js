@@ -51,7 +51,7 @@ window.renderStatistics = function(ctx, names, times) {
 
   for (var i = 0; i < names.length; i++) {
     ctx.fillStyle = getBarColor(names[i]);
-    ctx.fillRect(CLOUD_X + GAP * (i * 2 + 1), barWidth * 2, barWidth, (BAR_HEIGHT * times[i]) / maxTime);
+    ctx.fillRect(CLOUD_X + GAP * (i * 2 + 1), CLOUD_X * 2 + CLOUD_Y * 3, barWidth, -(BAR_HEIGHT * times[i]) / maxTime);
     ctx.fillStyle = '#000';
     ctx.fillText(names[i], CLOUD_X + GAP * (i * 2 + 1), CLOUD_X + BAR_HEIGHT);
     ctx.fillText(Math.round(times[i]), CLOUD_X + GAP * (i * 2 + 1), CLOUD_Y * 2 + GAP );
